@@ -16,28 +16,57 @@
   --colorBottomLeftActive: #ffbe76;
   --bg1: #dedede;
   --bg2: #ecf0f1;
+  --bg3: #163f7c;
   --fontColor: #163f7c;
   --black: #000000;
+  --white: #ffffff;
   --fontBase: "Anton", sans-serif;
 }
-
 body {
+  font-family: var(--fontBase);
+  overflow: hidden;
   background: var(--bg1);
+}
+header {
+  background-color: var(--bg3);
+  height: 60px;
+}
+header nav {
+  height: 100%;
+}
+header nav ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  color: var(--white);
+}
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  font-family: var(--fontBase);
+  padding-top: 60px;
 }
 
 .gameboard {
-  height: 100vh;
-  width: 100vh;
+  height: 280px;
+  width: 280px;
   border-radius: 50%;
-  overflow: hidden;
   margin: 0 auto;
-  max-height: 60vh;
-  max-width: 60vh;
+}
+.gameboard div:nth-child(1) {
+  border-top-left-radius: 100%;
+}
+.gameboard div:nth-child(2) {
+  border-top-right-radius: 100%;
+}
+.gameboard div:nth-child(3) {
+  border-bottom-left-radius: 100%;
+}
+.gameboard div:nth-child(4) {
+  border-bottom-right-radius: 100%;
 }
 .color {
   cursor: pointer;
@@ -87,14 +116,14 @@ body {
 }
 
 .btn-start {
-  width: 400px;
+  width: 280px;
   height: 100px;
   background: var(--bg2);
   color: var(--fontColor);
   font-size: 2.5rem;
   position: absolute;
-  top: calc(50% - 50px);
-  left: calc(50% - 200px);
+  top: 30%;
+  left: calc(50% - 140px);
   border: 0;
   outline: none;
   box-shadow: 2px 2px 8px var(--black);
@@ -103,4 +132,18 @@ body {
 
 .hide {
   display: none;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  background-color: var(--bg3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  color: var(--white);
 }
