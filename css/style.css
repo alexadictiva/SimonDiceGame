@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -16,6 +18,7 @@
   --bg2: #ecf0f1;
   --fontColor: #163f7c;
   --black: #000000;
+  --fontBase: "Anton", sans-serif;
 }
 
 body {
@@ -24,6 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  font-family: var(--fontBase);
 }
 
 .gameboard {
