@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --colorTopLeft: #22a6b3;
+  --colorTopLeftActive: #7ed6df;
+  --colorTopRight: #be2edd;
+  --colorTopRightActive: #e056fd;
+  --colorBottomRight: #6ab04c;
+  --colorBottomRightActive: #badc58;
+  --colorBottomLeft: #f0932b;
+  --colorBottomLeftActive: #ffbe76;
+  --bg1: #dedede;
+  --bg2: #ecf0f1;
+  --fontColor: #163f7c;
+  --black: #000000;
+}
+
+body {
+  background: var(--bg1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.gameboard {
+  height: 100vh;
+  width: 100vh;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  max-height: 60vh;
+  max-width: 60vh;
+}
+.color {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: left;
+}
+
+.celeste {
+  background: var(--colorTopLeft);
+}
+
+.celeste.light {
+  background: var(--colorTopLeftActive);
+}
+
+.violeta {
+  background: var(--colorTopRight);
+}
+
+.violeta.light {
+  background: var(--colorTopRightActive);
+}
+
+.naranja {
+  background: var(--colorBottomLeft);
+}
+
+.naranja.light {
+  background: var(--colorBottomLeftActive);
+}
+
+.verde {
+  background: var(--colorBottomRight);
+}
+
+.verde.light {
+  background: var(--colorBottomRightActive);
+}
+
+.btn-start {
+  width: 400px;
+  height: 100px;
+  background: var(--bg2);
+  color: var(--fontColor);
+  font-size: 2.5rem;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 200px);
+  border: 0;
+  outline: none;
+  box-shadow: 2px 2px 8px var(--black);
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
