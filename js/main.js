@@ -15,7 +15,7 @@ class Juego {
   inicializar() {
     // inicializacion del metodo o funcion que inicia el juego
     button.classList.add("hide"); // escondel el boton
-    this.nivel = 7;
+    this.nivel = 1;
     this.colores = {
       celeste,
       violeta,
@@ -31,6 +31,7 @@ class Juego {
   }
   siguienteNivel() {
     this.iluminarSecuencia();
+    this.agregarEventosClick();
   }
   transformarNumeroAColor(numero) {
     switch (numero) {
@@ -56,6 +57,15 @@ class Juego {
   }
   apagarColor(color) {
     this.colores[color].classList.remove("light");
+  }
+  agregarEventosClick() {
+    this.colores.celeste.addEventListener("click", this.elegirColor.bind(this));
+    this.colores.verde.addEventListener("click", this.elegirColor.bind(this));
+    this.colores.violeta.addEventListener("click", this.elegirColor.bind(this));
+    this.colores.naranja.addEventListener("click", this.elegirColor.bind(this));
+  }
+  elegirColor(event) {
+    console.log(event);
   }
 }
 
