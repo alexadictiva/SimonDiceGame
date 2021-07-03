@@ -7,14 +7,22 @@ const ultimoNivel = 10;
 
 class Juego {
   constructor() {
-    this.inicializar();
+    this.inicializar(); // declaramos la funcion que inicia el juego
+    this.generarSecuencia(); //declaramos function que genera la secuencia de nuero que va a indica que color se va a encender.
   }
 
   inicializar() {
-    button.classList.add("hide");
+    // inicializacion del metodo o funcion que inicia el juego
+    button.classList.add("hide"); // escondel el boton
+  }
+  generarSecuencia() {
+    //inicializacion del metodo o funcion que define la secuencia
+    this.secuencia = new Array(ultimoNivel)
+      .fill(0)
+      .map((n) => Math.floor(Math.random() * 4));
   }
 }
 
 function empezarJuego() {
-  var juego = new Juego();
+  window.juego = new Juego();
 }
