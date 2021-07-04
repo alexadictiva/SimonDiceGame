@@ -24,7 +24,7 @@
 }
 body {
   font-family: var(--fontBase);
-  overflow: hidden;
+  overflow-x: hidden;
   background: var(--bg1);
 }
 header {
@@ -134,11 +134,28 @@ header nav ul {
 .hide {
   display: none;
 }
-
+.explanation {
+  margin: 25px 0;
+  padding: 0 20px;
+}
+.explanation h2,
+.explanation p {
+  text-align: center;
+}
+.explanation h2 {
+  font-size: 2.4rem;
+}
+.explanation p {
+  margin-top: 10px;
+  font-size: 1.8rem;
+}
+.explanation p:last-child {
+  margin-top: 15px;
+  font-size: 3rem;
+}
 footer {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+
   height: 60px;
   background-color: var(--bg3);
   display: flex;
@@ -147,4 +164,11 @@ footer {
 }
 footer p {
   color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
